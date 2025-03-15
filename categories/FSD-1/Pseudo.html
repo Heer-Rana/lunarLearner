@@ -1,0 +1,72 @@
+<!-- In pseudo class sequence should be maintained link,visited,hover and active -->
+<html>
+    <head>
+        <style>
+            .a1:link{
+                color: red;font-size: 20px;text-decoration: dotted ; none;
+            }
+            .a1:visited{
+                color: aquamarine;text-decoration: solid;
+            }
+            .a1:hover{
+                color: brown;text-decoration: underline;font-size: 24px;
+            }
+            .a1:active{
+                color: blue;text-decoration: underline;font-size: 24px;
+            }
+            p::first-line{
+                color: blueviolet;font-weight: bold;text-decoration:underline;text-transform: capitalize;font-size: 18px;
+            }
+            p{
+                font-size: 18px;
+                text-transform: capitalize;text-align: center;
+            }
+            p::first-letter{
+                color:red;font-weight: bolder;text-decoration: underline;font-family: 'Courier New', Courier, monospace;
+                font-size: 90px;
+            }
+            .p1::before{
+                vertical-align: center;
+                content:"😊";
+            }
+            .p1::after{
+                vertical-align: center;
+                content: url("P1.jpg");
+            }
+            .u1 li::marker{
+                color: red;content:"😉";font-size: 30px;
+            }
+            .u2 li::marker{
+                color: green;
+                font-size: 28px;
+            }
+            ::selection{
+                color: aqua;background-color: blueviolet;
+            }
+            .p1::selection{
+                background-color: greenyellow;color: blue;
+            }
+        </style>
+    </head>
+    <body>
+        <a href="#" target="_blank" class="a1">Click here</a>
+        <!-- pseudo elements -->
+         <!-- selector: :pseudo element{} -->
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. <br></br>
+     Voluptates molestias ducimus fugiat eum nesciunt sit eos, autem doloribus aut neque illum! <br></br>
+     Pariatur autem accusantium assumenda optio expedita quas nihil repellat?</p>
+     <p class="p1">Spread happiness wherever you go</p>   
+     <ul class="u1">
+        <li>Html</li>
+        <li>css</li>
+        <li>javascript</li>
+        <li>Bootcamp</li>
+     </ul>
+     <ul class="u2">
+        <li>List-1</li>
+        <li>List-2</li>
+        <li>List-3</li>
+        <li>List-4</li>
+     </ul>
+    </body>
+</html>

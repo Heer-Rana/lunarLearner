@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lunar-Learner | Space Science Articles</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+        <img src="logo.jpg.png" alt="Lunar Learner Logo" width="50" height="50" class="d-inline-block align-top me-2 rounded-circle">
+                Lunar Learner</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="categories.html">Categories</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="articles.html">Articles</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="D:\project-Solar-System-main (3)\project\categories\trending1.html">Trending</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="login.html">Login</a>
+                  </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    </nav>
+
+  <!-- Main Content -->
+  <main class="container my-5">
+    <div class="row">
+      <!-- Sidebar (Popular Topics) -->
+      <div class="col-md-3">
+        <nav class="nav flex-column nav-pills popular-topics">
+          <h4 class="text-center mb-4 text-white"><i class="bold"></i>Popular Topics</h4>
+          <a href="#exoplanets" class="nav-link active"><i class="fa fa-arrow-right"> </i>Exoplanets</a>
+          <a href="#blackHole" class="nav-link"><i class="fa fa-arrow-right"> </i>Black Holes</a>
+          <a href="categories/space-exploration.html" class="nav-link"><i class="fa fa-arrow-right"></i>Space Exploration</a>
+          <a href="#spacetech"  class="nav-link"><i class="fa fa-arrow-right"></i>Space Technology</a>
+          <a href="categories/Fields.html#cosmo" class="nav-link"><i class="fa fa-arrow-right"></i>Cosmology</a>
+        </nav>
+      </div>
+
+      <!-- Newspaper-Style Articles -->
+      <section class="col-md-9" style="color: white;"> 
+        <!-- Article 1 -->
+        <article class="mb-5">
+          <img src="exoplanets.jpg" alt="Exoplanet Discovery" width="1000" height="300">
+          <h2  class="fx-bold" style="color: beige;">Groundbreaking Exoplanet Discovery: Earth 2.0?</h2>
+          <p style="color: grey;">
+            Published: February 2, 2025 | By Dr. Stella Cosmos
+          </p>
+          <p>
+            Astronomers have made a stunning discovery: an Earth-sized exoplanet orbiting within the habitable zone of a sun-like star, just 20 light-years away...
+          </p>
+          <p>
+            The newly discovered exoplanet, named Novaterra, has captured the imagination of scientists and the public alike. Here's what makes this discovery so exciting:
+          </p>
+          <ul>
+            <li><strong>Size and Mass:</strong> Novaterra is 1.1 times the size of Earth and has a similar mass, suggesting it's a rocky planet.</li>
+            <li><strong>Habitable Zone:</strong> The planet orbits its star at a distance that could allow liquid water to exist on its surface.</li>
+            <li><strong>Atmosphere:</strong> Initial spectroscopic observations hint at the presence of an atmosphere.</li>
+            <li><strong>Star Type:</strong> Novaterra's host star is remarkably similar to our Sun, increasing the chances for Earth-like conditions.</li>
+          </ul>
+          <p>
+            This discovery opens up new possibilities for the search for extraterrestrial life and deepens our understanding of planetary formation and evolution. Future observations with next-generation telescopes will aim to characterize Novaterra's atmosphere and search for potential biosignatures.
+          </p>
+        </article>
+        <article class="mb-5">
+            <img src="blackhole.jpg" alt="Illustration of Black Hole Merger" width="1000" height="300" id="blackHole">
+            <h2 class="fx-bold" style="color: beige;">Massive Black Hole Merger Detected</h2>
+            <p style="color:grey">
+              Published: January 28, 2025 | By Dr. Quasar Smith
+            </p>
+            <p>
+              Gravitational wave observatories have detected the most massive black hole merger ever observed, providing new insights into the formation of supermassive black holes...
+            </p>
+            <p>
+              The detected merger involved two black holes with masses of approximately 65 and 85 times that of our Sun, resulting in a final black hole about 145 times the Sun's mass. This event, dubbed GW2024-12, has several implications for our understanding of black holes and the universe:
+            </p>
+            <ul>
+              <li><strong>Intermediate-Mass Black Holes:</strong> This merger provides strong evidence for the existence of intermediate-mass black holes, filling a gap between stellar-mass and supermassive black holes.</li>
+              <li><strong>Formation Theories:</strong> The discovery challenges existing theories about how such massive black holes form and evolve.</li>
+              <li><strong>Gravitational Waves:</strong> The event produced the most energetic gravitational wave signal ever detected, equivalent to converting 8 solar masses into pure energy in a fraction of a second.</li>
+            </ul>
+            <p>
+              Scientists are now reevaluating models of black hole formation and growth, with implications for our understanding of galaxy evolution and the early universe.
+            </p>
+          </article>
+          <article class="mb-5">
+            <img src="spaceTech.jpg" alt="Advancements in Space Technology" width="1000" height="300" id="spacetech">
+            <h2 class="fx-bold" style="color: beige;">Revolutionizing Space Technology: The Future of Space Exploration</h2>
+            <p style="color: grey;">
+                Published: February 2, 2025 | By Dr. Orion Vega
+            </p>
+            <p>
+                Space technology has advanced at an unprecedented pace, paving the way for deeper space exploration, interplanetary travel, and even potential colonization of Mars...
+            </p>
+            <p>
+                Here are some of the most groundbreaking advancements shaping the future of space exploration:
+            </p>
+            <ul>
+                <li><strong>Reusable Rockets:</strong> Companies like SpaceX and Blue Origin have revolutionized the industry with reusable launch systems, drastically reducing space travel costs.</li>
+                <li><strong>AI and Robotics:</strong> Autonomous rovers, robotic arms, and AI-driven spacecraft navigation have enhanced space missions.</li>
+                <li><strong>Fusion Propulsion:</strong> Scientists are developing fusion-powered spacecraft that could cut interstellar travel time significantly.</li>
+                <li><strong>Moon and Mars Colonization:</strong> Plans for lunar bases and Mars habitats are underway, with NASA's Artemis mission and SpaceX's Starship leading the charge.</li>
+            </ul>
+            <p>
+                These innovations are bringing humanity closer to becoming an interplanetary species. With advancements in propulsion, robotics, and space habitats, the dream of long-term space colonization is closer than ever.
+            </p>
+        </article>
+        
+  
+      </section>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-dark text-white py-4">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <h4>About Lunar-Learner</h4>
+                <p>Your comprehensive guide to understanding the cosmos and exploring space science.</p>
+            </div>
+            <div class="col-md-4">
+                <h4>Quick Links</h4>
+                <ul class="list-unstyled">
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="articles.html">Articles</a></li>
+                    <li><a href="categories.html">Categories</a></li>
+                </ul>
+            </div>
+            <div class="col-md-4">
+                <h4>Connect With Us</h4>
+                <p>Stay updated with the latest in space science and astronomy.</p>
+                <div class="social-icons mt-2">
+                    <a href="https://www.facebook.com" target="_blank" class="text-white me-3"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.linkedin.com" target="_blank" class="text-white me-3"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="https://www.instagram.com" target="_blank" class="text-white"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="text-center mt-4">
+            <p>&copy; 2025 Lunar-Learner. All rights reserved.</p>
+        </div>
+    </div>
+</footer>
+
+  <!-- Bootstrap JS -->
+
+</body>
+</html>

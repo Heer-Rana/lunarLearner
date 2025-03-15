@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login/Signup - Lunar-Learner</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            background: radial-gradient(circle at center, #001d3d, #000814);
+            color: #e0f7ff;
+            font-family: 'Open Sans', sans-serif;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        nav {
+            z-index: 10;
+        }
+
+        main {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .card {
+            border: none;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            height: 100%;
+            width: 380px;
+            max-width: 500px; /* Max width for the card */
+        } 
+
+        h2 {
+            color: #00f7ff;
+            text-shadow: 0 0 10px #00c3ff, 0 0 20px #00c3ff;
+        }
+
+        .form-control {
+            width: 90%;
+            margin: 10px auto;
+            padding: 12px;
+            background: rgba(255, 255, 255, 0.1); /* Semi-transparent background for input */
+            border: 1px solid rgba(0, 157, 255, 0.3);
+            color: white;
+            border-radius: 20px;
+            box-shadow: 0 0 10px rgba(0, 157, 255, 0.2);
+            transition: 0.3s;
+        }
+
+        .form-control:focus {
+            background: rgba(255, 255, 255, 0.2);
+            box-shadow: 0 0 15px rgba(0, 157, 255, 0.4);
+        }
+
+        .form-control::placeholder {
+            color: rgba(255, 255, 255, 0.6);
+        }
+
+        .btn-primary {
+            width: 100%;
+            background: linear-gradient(45deg, rgba(0, 195, 255, 0.7), rgba(0, 102, 255, 0.7));
+            border: none;
+            border-radius: 20px;
+            padding: 12px;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: white;
+            cursor: pointer;
+            margin-top: 15px;
+            box-shadow: 0 0 10px rgba(0, 157, 255, 0.5);
+            transition: all 0.3s ease;
+        }
+
+        .btn-primary:hover {
+            background: linear-gradient(45deg, rgba(0, 102, 255, 0.8), rgba(0, 195, 255, 0.8));
+            transform: translateY(-2px);
+            box-shadow: 0 0 20px rgba(0, 157, 255, 0.7);
+        }
+
+        .card-footer {
+            margin-top: 10px;
+            font-size: 14px;
+        }
+
+        .toggle-form {
+            cursor: pointer;
+            color: #00c3ff;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .toggle-form:hover {
+            text-decoration: underline;
+            color: #0099ff;
+        }
+
+        .error-message
+        {
+            color: #ff4d4d;
+            font-size: 14px;
+            margin-top: 5px;
+            text-shadow : 0 0 5px rgba(255, 77, 77, 0.5);
+        }
+
+        footer {
+            background-color: #343a40; 
+            color: white;
+            padding: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="logo.jpg.png" alt="Lunar Learner Logo" width="50" height="50" class="d-inline-block align-top me-2 rounded-circle">
+                Lunar Learner</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="categories.html">Categories</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="articles.html">Articles</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="D:\project-Solar-System-main (3)\project\categories\trending1.html">Trending</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="login.html">Login</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container my-5">
+        <div class="row">
+            <div class="col-md-8 mx-auto">
+                <div class="card mb-4">
+                    <div class="card-body">
+                        <h2 id="form-title">Login</h2>
+                        <form id="login-form" onsubmit="return handleLogin(event)">
+                            <input type="text" class="form-control" placeholder="Username" required id="login-username">
+                            <input type="password" class="form-control" placeholder="Password" required id="login-password">
+                            <div id="login-error" class="error-message"></div>
+                            <button type="submit" class="btn btn-primary mt-3">Login</button>
+                        </form>
+    
+                        <form id="signup-form" style="display: none;" onsubmit="return handleSignup(event)">
+                            <input type="text" class="form-control" placeholder="Username" required id="signup-username">
+                            <input type="email" class="form-control" placeholder="Email" required id="signup-email">
+                            <input type="password" class="form-control" placeholder="Password" required id="signup-password">
+                            <div id="signup-error" class="error-message"></div>
+                            <button type="submit" class="btn btn-primary mt-3">Sign Up</button>
+                        </form>
+                    </div>
+                    <div class="card-footer">
+                        <p id="toggle-text" style="color:blue;">Don't have an account? <span class="toggle-form" onclick="toggleForms()">Sign Up</span></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Lunar-Learner. All rights reserved.</p>
+        </div>
+    </footer>
+    
+    <script>
+        const loginForm = document.getElementById('login-form');
+        const signupForm = document.getElementById('signup-form');
+        const loginError = document.getElementById('login-error');
+        const signupError = document.getElementById('signup-error');
+
+        // Load users from localStorage or initialize empty array
+        let users = JSON.parse(localStorage.getItem('users')) || [];
+
+        function toggleForms() {
+            const isLoginVisible = loginForm.style.display !== "none";
+            loginForm.style.display = isLoginVisible ? "none" : "block";
+            signupForm.style.display = isLoginVisible ? "block" : "none";
+            document.querySelector('.toggle-form').innerHTML = isLoginVisible 
+                ? `Already have an account? <span>Login</span>` : `Don't have an account? <span>Sign Up</span>`;
+            loginError.textContent = '';
+            signupError.textContent = '';
+        }
+
+        function handleLogin(event) {
+            event.preventDefault();
+            const username = document.getElementById('login-username').value;
+            const password = document.getElementById('login-password').value;
+
+            if (users.some(user => user.username === username && user.password === password)) {
+                localStorage.setItem('isLoggedIn', 'true');
+                alert('Login successful!');
+                window.location.href = 'index.html';
+            } else {
+                loginError.textContent = 'Invalid username or password.';
+            }
+            return false; 
+        }
+
+        function handleSignup(event) {
+            event.preventDefault();
+            const username = document.getElementById('signup-username').value;
+            const email = document.getElementById('signup-email').value;
+            const password = document.getElementById('signup-password').value;
+
+            if (users.some(user => user.username === username)) {
+                signupError.textContent = 'Username already exists. Please choose another one.';
+            } else {
+                users.push({ username, email, password });
+                localStorage.setItem('users', JSON.stringify(users));
+                alert('Signup successful! You can now log in.');
+                loginForm.style.display = "block";
+                signupForm.style.display = "none";
+                document.querySelector('.toggle-form').innerHTML = `Don't have an account? <span>Sign Up</span>`;
+                signupForm.reset();
+            }
+            return false; 
+        }
+    </script>
+</body>
+</html>

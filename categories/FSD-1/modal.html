@@ -1,0 +1,51 @@
+# Newspaper Articles
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <title>Newspaper Articles</title>
+    <style>
+        .article-content {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="text-center">Today's News</h1>
+        <div class="list-group">
+            <a href="#" class="list-group-item list-group-item-action" data-toggle="collapse" data-target="#article1">Article Title 1</a>
+            <div id="article1" class="collapse article-content">
+                <div class="card card-body">
+                    This is the content of Article 1.
+                </div>
+            </div>
+            <a href="#" class="list-group-item list-group-item-action" data-toggle="collapse" data-target="#article2">Article Title 2</a>
+            <div id="article2" class="collapse article-content">
+                <div class="card card-body">
+                    This is the content of Article 2.
+                </div>
+            </div>
+            <a href="#" class="list-group-item list-group-item-action" data-toggle="collapse" data-target="#article3">Article Title 3</a>
+            <div id="article3" class="collapse article-content">
+                <div class="card card-body">
+                    This is the content of Article 3.
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        $('.list-group-item').on('click', function() {
+            $('.article-content').collapse('hide');
+            $(this).next('.article-content').collapse('toggle');
+        });
+    </script>
+</body>
+</html>

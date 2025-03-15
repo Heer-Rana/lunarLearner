@@ -1,0 +1,28 @@
+<!-- Write HTML & CSS script to design one banner of advertisement using <p>
+    tag. That text of advertise should move continuously from left end to right
+    end, then return back from right to left end. Use red and huge fonts for text.
+    Advertise should begin after 1 second of loading page -->
+    <html>
+        <head>
+            <style>
+                @keyframes qb228{
+                    from{
+                        left:0px;top:0px;
+                    }
+                    to{
+                        left:100%;top:0px;
+                    }
+                }
+                    p{
+                        color:red;
+                        font-size:xx-large;
+                        position: relative;
+                        animation:qb228 8s 1s infinite alternate;
+    
+                    }
+            </style>
+        </head>
+        <body>
+            <p>Mega Auction!</p>
+        </body>
+    </html>

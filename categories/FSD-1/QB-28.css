@@ -1,0 +1,19 @@
+input[type="text"]:active
+{
+  background-color: lightgreen;
+}
+input[type="password"]:hover
+ {       
+  font-size:150%;;
+}
+input[type="number"]:hover
+{
+    font-size:150%;;
+}
+button:hover {
+    font-weight: bold;
+    font-style: italic;
+}
+label:active{
+    background-color: blue;
+}

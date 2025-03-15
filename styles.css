@@ -1,0 +1,379 @@
+:root {
+    --primary-color: #4a90e2;
+    --dark-color: #1a1a1a;
+    --light-color:  white;
+    --text-color: #333;
+    --white: #fff;
+}
+/* Base Styles */
+body {
+    font-family: 'Open Sans', sans-serif;
+    line-height: 1.6;
+    background: radial-gradient(circle, #000000, #0d1b2a, #1a2c45, #2c3e60);
+    background-size: cover;
+    background-attachment: fixed;
+    overflow-x: hidden;
+}
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('https://www.transparenttextures.com/patterns/stardust.png');
+    opacity: 0.3;
+    z-index: -1;
+}
+
+
+/* Navbar Enhancements */
+.navbar {
+    padding: 1.2rem 0;
+    background: var(--dark-color) !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease;
+}
+
+.navbar.scrolled {
+    padding: 0.8rem 0;
+    background: rgba(26, 26, 26, 0.95);
+    backdrop-filter: blur(10px);
+}
+
+.navbar-brand {
+    font-size: 2rem;
+    font-weight: 800;
+    color: var(--white);
+    letter-spacing: 1px;
+}
+
+.nav-link {
+    font-size: 1.1rem;
+    font-weight: 500;
+    padding: 0.7rem 1.2rem ;
+    color: rgba(255, 255, 255, 0.9) ;
+    transition: all 0.3s ease;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    color: var(--primary-color);
+    transform: translateY(-2px);
+}
+.nav-link {
+    color: rgba(255, 255, 255, 0.9);
+    transition: all 0.3s ease;
+}
+
+.nav-link.active {
+    color: var(--primary-color); /* Change color to primary color */
+    font-weight: bold; /* Make it bold */
+    text-decoration: underline; /* Optional: underline the active link */
+}
+/* Hero Section Enhancements */
+.hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+                url('https://images.unsplash.com/photo-1462332420958-a05d1e002413?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1940&q=80');
+    background-position: center;
+    background-size: cover;
+    color: var(--white);
+    padding: 200px 0 150px;
+    text-align: center;
+    margin-bottom: 0;
+    position: relative;
+}
+
+.hero::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100px;
+    background: linear-gradient(transparent, var(--light-color));
+}
+
+.hero h1 {
+    font-size: 4.5rem;
+    font-weight: 800;
+    margin-bottom: 1.5rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+.hero p {
+    font-size: 1.8rem;
+    font-weight: 300;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+    margin-bottom: 2rem;
+}
+
+/* Category Cards Enhancement */
+.category-card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 12px;
+    margin-bottom: 2rem;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    height: 300px;
+}
+
+.category-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.category-card:hover img {
+    transform: scale(1.1);
+}
+
+.category-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 2rem;
+    background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
+    color: var(--white);
+    transform: translateY(0);
+    transition: transform 0.3s ease;
+}
+
+.category-card:hover .category-overlay {
+    transform: translateY(-10px);
+}
+
+.category-overlay h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+/* Article Cards Enhancement */
+.card {
+    border: none;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    height: 100%;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.card-img-top {
+    height: 250px;
+    object-fit: cover;
+}
+
+.card-body {
+    padding: 2rem;
+}
+
+.card-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--dark-color);
+    margin-bottom: 1rem;
+}
+
+/* Section Titles Enhancement */
+.section-title {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: var(--dark-color);
+    margin-bottom: 3rem;
+    text-align: center;
+    position: relative;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 4px;
+    background: var(--primary-color);
+    border-radius: 2px;
+}
+
+/* Feature List Enhancement */
+.feature-list {
+    list-style: none;
+    padding: 0;
+    margin: 2rem 0;
+}
+
+.feature-list li {
+    padding: 1rem 0;
+    border-bottom: 1px solid white;
+    display: flex;
+    align-items: center;
+}
+
+.feature-list li::before {
+    content: '→';
+    color: var(--primary-color);
+    margin-right: 1rem;
+    font-weight: bold;
+}
+
+/* Footer Enhancement */
+footer {
+    background: var(--dark-color);
+    padding: 5rem 0 3rem;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+footer h4 {
+    color: var(--white);
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+}
+
+footer ul li {
+    margin-bottom: 0.5rem;
+}
+
+footer a {
+    color: rgba(255, 255, 255, 0.7);
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+footer a:hover {
+    color: var(--primary-color) !important;
+    text-decoration: none;
+}
+
+/* Responsive Enhancements */
+@media (max-width: 992px) {
+    .hero h1 {
+        font-size: 3.5rem;
+    }
+    
+    .hero p {
+        font-size: 1.4rem;
+    }
+    
+    .category-card {
+        height: 250px;
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar-brand {
+        font-size: 1.6rem;
+    }
+    
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+    
+    .hero p {
+        font-size: 1.2rem;
+    }
+    
+    .section-title {
+        font-size: 2rem;
+    }
+    
+    .category-card {
+        height: 200px;
+    }
+}
+
+/* Animation Classes */
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--light-color);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--primary-color);
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #357abd;
+}
+/* Latest Articles Section */
+.latest-articles {
+    background: radial-gradient(circle, #000000, #0d1b2a, #1a2c45, #2c3e60);/* Space-themed gradient */
+    color: white; /* Light blue text color for space theme */
+    background-size: cover;
+    background-attachment: fixed;
+    overflow-x: hidden;
+}
+
+/* Card Styles */
+.card {
+    background: rgba(255, 255, 255, 0.1); /* Semi-transparent card background */
+    border: 1px solid rgba(255, 255, 255, 0.2); /* Subtle border */
+    border-radius: 15px; /* Rounded corners */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5); /* Add depth */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px); /* Lift on hover */
+    /* box-shadow: 0 8px 25px rgba(255, 255, 255, 0.3);  */
+}
+
+/* Card Title */
+.card-title {
+    color: #e0eaff; /* Light blue title */
+    font-weight: bold;
+}
+
+/* Card Text */
+.card-text {
+    color: rgba(224, 234, 255, 0.9); /* Softer blue for text */
+}
+
+/* Card Button */
+.card .btn-primary {
+    background: var(--primary-color); /* Golden button */
+    border: none;
+    color: #1a1a1a; /* Dark text on golden button */
+    transition: 0.3s ease, transform 0.3s ease;
+}
+
+.card .btn-primary:hover {
+    background: #e0eaff; /* Light blue hover */
+    color: #1a1a1a; /* Text remains dark */
+    transform: scale(1.05); /* Slightly grow the button on hover */
+}
+
+/* Responsive Enhancements */
+@media (max-width: 768px) {
+    .latest-articles .section-title {
+        font-size: 1.8rem;
+    }
+
+    .card-title {
+        font-size: 1.4rem;
+    }
+}

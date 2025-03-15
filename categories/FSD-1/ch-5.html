@@ -1,0 +1,47 @@
+# Transform Methods Demonstration
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transform Methods</title>
+    <style>
+        .container {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+        }
+        .box {
+            width: 100px;
+            height: 100px;
+            background-color: #3498db;
+            transition: transform 0.5s;
+        }
+        div #i1:hover{
+            transform: translate(50px,100px);
+        }
+        div #i2:hover{
+            transform: rotate(-40deg);
+        }
+        div #i3:hover{
+            transform: scale(2,2.5);
+        }
+        div #i4:hover{
+            transform: scaleY(2);
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box" id="i1">Rotate</div>
+        <div class="box" id="i2">Scale</div>
+        <div class="box" id="i3">ScaleX</div>
+        <div class="box" id="i4">ScaleY</div>
+    </div>
+</body>
+</html>

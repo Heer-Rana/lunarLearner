@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trending - Lunar-Learner</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="../styles.css">
+    <style>
+        <!-- body {
+            font-family: 'Open Sans', sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--light-color);
+        }
+        h1 {
+            font-size: 2.5rem;
+            font-weight: bold;
+            margin-bottom: 2rem;
+        } -->
+        .card {
+            height: 100%; /* Ensure all cards have the same height */
+        }
+
+        img {
+            width: 100%; /* Make the image responsive */
+            height: 200px; /* Set a fixed height */
+            object-fit: cover; /* Maintain aspect ratio and cover the area */
+            border-radius: 5px; /* Match the card's border radius */
+        }
+
+        footer {
+            background: var(--dark-color);
+            padding: 5rem 0 3rem;
+            color: rgba(255, 255, 255, 0.9);
+        }
+        footer h4 {
+            color: var(--white);
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+        } 
+        footer ul li {
+            margin-bottom: 0.5rem;
+        }
+        footer a {
+            color: rgba(255, 255, 255, 0.7);
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+        
+        footer a:hover {
+            color: var(--primary-color);
+            text-decoration: none;
+        }
+        .navbar {
+            padding: 0.5rem 1rem; /* Reduce padding */
+        }
+
+        .navbar-brand img {
+            width: 40px; /* Adjust logo size */
+            height: 40px; /* Adjust logo size */
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="../index.html">
+                <img src="../logo.jpg.png" alt="Lunar Learner Logo" width="50" height="50" class="d-inline-block align-top me-2 rounded-circle">
+                Lunar-Learner</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="../index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../categories.html">Categories</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../articles.html">Articles</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../about.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="file:///D:/project-Solar-System-main%20(3)/project/categories/trending1.html">Trending</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../login.html">Login</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <main class="container my-8">
+        <h1 class="text-center" style="color: white;">Trending Articles</h1>
+        <div class="row">
+            <div class="col-md-6 mb-4">
+                <div class="card">
+                    <img src="blueOrigin.jpg" class="card-img-top" alt="Blue Origin New Glenn">
+                    <div class="card-body">
+                        <h5 class="card-title">Blue Origin New Glenn 1st Launch</h5>
+                        <p class="card-text">Blue Origin's New Glenn rocket is set to make its first launch, promising to revolutionize space travel with its reusable design.</p>
+                        <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal1">Read More</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 mb-4">
+                <div class="card">
+                    <img src="fullMoon.jpg" class="card-img-top" alt="Next Full Moon">
+                    <div class="card-body">
+                        <h5 class="card-title">Next Full Moon</h5>
+                        <p class="card-text">Mark your calendars! The next full moon will be a spectacular sight, perfect for stargazing and lunar photography.</p>
+                        <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal2">Read More</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 mb-4">
+                <div class="card">
+                    <img src="aurora-forecast.jpg" class="card-img-top" alt="Aurora Forecast">
+                    <div class="card-body">
+                        <h5 class="card-title">Aurora Forecast</h5>
+                        <p class="card-text">Get ready for an incredible display of the northern lights! Our latest forecast predicts optimal viewing conditions.</p>
+                        <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal3">Read More</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 mb-4">
+                <div class="card">
+                    <img src="night-sky.jpg" class="card-img-top" alt="Night Sky">
+                    <div class="card-body">
+                        <h5 class="card-title">Night Sky</h5>
+                        <p class="card-text">Explore the wonders of the night sky with our guide to the best celestial events happening this month.</p>
+                        <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal4">Read More</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Modals -->
+    <div class="modal fade" id="modal1" tabindex="-1" aria-labelledby="modalLabel1" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalLabel1">Blue Origin New Glenn 1st Launch</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <h4>The First Launch:</h4>
+                    <p>Date: The first launch of New Glenn was initially scheduled for 2024, but it has been subject to delays. Location: The launch will take place from Launch Complex 36 at Cape Canaveral Space Force Station in Florida, which Blue Origin has been refurbishing for its operations.</p>
+                    <h4>Mission Types:</h4>
+                    <p>It is designed for a variety of missions, including launching satellites, delivering cargo to space, and potentially human spaceflight in the future.</p>
+                    <h4>Significance:</h4>
+                    <p>New Glenn is poised to compete with other heavy-lift launch vehicles, such as SpaceX's Falcon Heavy and Starship, as well as ULA’s Vulcan Centaur. Its reusability aligns with the industry shift toward reducing launch costs and increasing sustainability. Blue Origin hopes to expand its presence in the satellite deployment market and support future deep-space missions, including lunar exploration as part of NASA's Artemis program.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modal2" tabindex="-1" aria-labelledby="modalLabel2" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalLabel2">Next Full Moon</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <h5>The next full moon, known as the Worm Moon, will occur on Friday, March 14, 2025, at 2:55 A.M. Eastern Time (ET)</h5>
+                    <p>For observers in Ahmedabad, Gujarat, India (Indian Standard Time, IST), this translates to 1:25 P.M. IST on the same day.</p>
+                    <p>Moonrise Time: In Ahmedabad, the moon will rise on the evening of March 14, 2025, at approximately 6:30 P.M. IST. This is an ideal time for observation, as the moon will appear large and luminous near the horizon.</p>
+                    <p>The Worm Moon is traditionally named to signify the time when earthworms emerge from the soil as the ground thaws, marking the approach of spring in the Northern Hemisphere.</p>
+                    <p>By planning ahead and selecting a suitable viewing spot, you can experience the beauty and significance of the Worm Moon in March 2025.</p>
+                    <p>Cultural Significance: The Worm Moon holds various cultural meanings across different societies. Exploring local traditions and folklore can provide a deeper appreciation of this lunar event.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modal3" tabindex="-1" aria-labelledby="modalLabel3" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalLabel3">Aurora Forecast</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <h5>The aurora forecast for January 19, 2025, indicates unsettled geomagnetic conditions, suggesting a moderate likelihood of auroral activity.</h5>
+                    <p>According to the Space Weather Prediction Center's Aurora Dashboard, the aurora's visibility is predicted nightly, with animations showing the aurora's activity over the past 24 hours and estimates for the next 30 minutes.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modal4" tabindex="-1" aria-labelledby="modalLabel4" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalLabel4">Night Sky</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <h4>Planetary Alignments and Visibility</h4>
+                    <p>Venus: The "Evening Star" will be prominent in the western sky after sunset, shining brightly and easily visible to the naked eye.</p>
+                    <p>Jupiter and Saturn: Both gas giants will rise late in the evening and can be observed in the eastern sky. Telescopes will reveal Jupiter's Galilean moons and Saturn's rings.</p>
+                    <p>Mars: Visible in the early morning hours, glowing red and steadily moving eastward.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="bg-dark text-white py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h4>About Lunar-Learner</h4>
+                    <p>Your comprehensive guide to understanding the cosmos and exploring space science.</p>
+                </div>
+                <div class="col-md-4">
+                    <h4>Quick Links</h4>
+                    <ul class="list-unstyled">
+                        <li><a href="../about.html">About Us</a></li>
+                        <li><a href="../articles.html">Articles</a></li>
+                        <li><a href="../categories.html">Categories</a></li>
+                    </ul>
+                </div>
+ 
+                <div class="col-md-4">
+                    <h4>Connect With Us</h4>
+                    <p>Stay updated with the latest in space science and astronomy.</p>
+                    <div class="social-icons mt-2">
+                        <a href="https://www.facebook.com" target="_blank" class="text-white me-3"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.linkedin.com" target="_blank" class="text-white me-3"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://www.instagram.com" target="_blank" class="text-white"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-4">
+                <p>&copy; 2025 Lunar-Learner. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+     
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../script.js"></script>
+</body>
+</html>
